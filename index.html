@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>The Tiny Hive | Early Year Foundation School</title>
   <meta name="description"
     content="The Tiny Hive is a premier early year foundation school for children aged 6 months to 6 years. Nurturing curious little minds with nature, creativity, and love.">
@@ -44,9 +44,9 @@
   <aside class="top-announcement" aria-label="Announcement banner">
     <div class="container announcement-inner">
       <span class="announcement-pill">✨ Admissions 2026–2027</span>
-      <p class="announcement-text">Limited spots available for Autumn Cohort! <strong>Open House Saturday, Oct
-          10th.</strong></p>
-      <a href="#tour-modal-trigger" class="announcement-link" data-open-tour>RSVP for Open House &rarr;</a>
+      <p class="announcement-text">Our new campus sensory pavilions are currently being prepared! <strong>Tours opening
+          soon.</strong></p>
+      <a href="#tourDialog" class="announcement-link" data-open-tour>Join Priority Notification List &rarr;</a>
     </div>
   </aside>
 
@@ -82,9 +82,15 @@
           <li><a href="#philosophy" class="nav-link">Philosophy</a></li>
           <li><a href="#campus" class="nav-link">Campus</a></li>
           <li><a href="#daily-rhythm" class="nav-link">Daily Rhythm</a></li>
-          <li><a href="#estimator" class="nav-link">Tuition</a></li>
           <li><a href="#reviews" class="nav-link">Wall of Love</a></li>
+          <li><a href="#standards" class="nav-link">Safety &amp; Care</a></li>
         </ul>
+        <!-- Mobile drawer actions -->
+        <div class="mobile-drawer-cta">
+          <button type="button" class="btn btn-primary btn-block btn-pill" data-open-tour>
+            <span class="btn-sparkle">✨</span> Register Interest (Tours Soon)
+          </button>
+        </div>
       </nav>
 
       <!-- Header CTAs & Interactive Controls -->
@@ -97,7 +103,7 @@
         </button>
 
         <button type="button" class="btn btn-primary btn-sm btn-pill" id="tour-modal-trigger" data-open-tour>
-          <span class="btn-sparkle">✨</span> Book a Tour
+          <span class="btn-sparkle">✨</span> Register Interest
         </button>
 
         <!-- Mobile Menu Toggle Button -->
@@ -110,6 +116,9 @@
       </div>
     </div>
   </header>
+
+  <!-- Mobile Drawer Backdrop Overlay -->
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
 
   <main id="main-content">
 
@@ -136,7 +145,7 @@
 
           <div class="hero-cta-group animate-fade-in-up delay-2">
             <button type="button" class="btn btn-primary btn-lg btn-pill btn-bounce" data-open-tour>
-              <span>Schedule a Hive Visit</span>
+              <span>Register Interest</span>
               <svg class="btn-arrow" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -146,6 +155,12 @@
             <a href="#programs" class="btn btn-outline btn-lg btn-pill">
               <span>Explore Programs</span>
             </a>
+          </div>
+
+          <!-- Infrastructure status note -->
+          <div class="infra-status-note animate-fade-in-up delay-2">
+            <span class="infra-icon">🚧</span>
+            <span>Campus infrastructure currently in final setup · <strong>On-site tours opening soon!</strong></span>
           </div>
 
           <!-- Trust Badges & Ratios -->
@@ -409,8 +424,8 @@
 
                 <div class="panel-action-bar">
                   <button type="button" class="btn btn-primary btn-pill" data-open-tour
-                    data-program-preselect="explorers">Book Visit for Infant Nest</button>
-                  <a href="#estimator" class="btn btn-outline btn-pill">Calculate Tuition</a>
+                    data-program-preselect="explorers">Inquire About Tiny Explorers</button>
+                  <a href="#philosophy" class="btn btn-outline btn-pill">Our Philosophy &rarr;</a>
                 </div>
               </div>
 
@@ -468,8 +483,8 @@
 
               <div class="panel-action-bar">
                 <button type="button" class="btn btn-primary btn-pill" data-open-tour
-                  data-program-preselect="bees">Visit the Busy Bees Room</button>
-                <a href="#estimator" class="btn btn-outline btn-pill">Calculate Tuition</a>
+                  data-program-preselect="bees">Inquire About Busy Bees</button>
+                <a href="#philosophy" class="btn btn-outline btn-pill">Our Philosophy &rarr;</a>
               </div>
             </div>
 
@@ -525,8 +540,8 @@
 
               <div class="panel-action-bar">
                 <button type="button" class="btn btn-primary btn-pill" data-open-tour
-                  data-program-preselect="honeycombs">Tour Little Honeycombs</button>
-                <a href="#estimator" class="btn btn-outline btn-pill">Calculate Tuition</a>
+                  data-program-preselect="honeycombs">Inquire About Little Honeycombs</button>
+                <a href="#philosophy" class="btn btn-outline btn-pill">Our Philosophy &rarr;</a>
               </div>
             </div>
 
@@ -582,8 +597,8 @@
 
               <div class="panel-action-bar">
                 <button type="button" class="btn btn-primary btn-pill" data-open-tour
-                  data-program-preselect="kindergarten">Book Kindergarten Discovery</button>
-                <a href="#estimator" class="btn btn-outline btn-pill">Calculate Tuition</a>
+                  data-program-preselect="kindergarten">Inquire About Kindergarten</button>
+                <a href="#philosophy" class="btn btn-outline btn-pill">Our Philosophy &rarr;</a>
               </div>
             </div>
 
@@ -672,15 +687,48 @@
 
           <div class="philosophy-visual">
             <div class="philosophy-honeycomb-showcase">
+              <!-- Decorative orbital connection ring -->
+              <div class="orbital-ring" aria-hidden="true"></div>
+
+              <!-- Central Whole Child Badge -->
               <div class="honeycomb-center-badge">
                 <div class="center-bee">🐝</div>
                 <strong>The Whole Child</strong>
                 <span>At the Heart of The Hive</span>
               </div>
-              <div class="orb orb-top">🧠 Cognitive Wonder</div>
-              <div class="orb orb-right">💖 Emotional Empathy</div>
-              <div class="orb orb-bottom">🌿 Nature Connection</div>
-              <div class="orb orb-left">🎨 Creative Flourish</div>
+
+              <!-- Four Dimensions in 4 Corners with clear spacing -->
+              <div class="orb orb-cognitive">
+                <span class="orb-icon">🧠</span>
+                <div class="orb-content">
+                  <strong>Cognitive Wonder</strong>
+                  <span>Inquiry &amp; Logic</span>
+                </div>
+              </div>
+
+              <div class="orb orb-creative">
+                <span class="orb-icon">🎨</span>
+                <div class="orb-content">
+                  <strong>Creative Flourish</strong>
+                  <span>Atelier &amp; Arts</span>
+                </div>
+              </div>
+
+              <div class="orb orb-nature">
+                <span class="orb-icon">🌿</span>
+                <div class="orb-content">
+                  <strong>Nature Connection</strong>
+                  <span>Forest &amp; Earth</span>
+                </div>
+              </div>
+
+              <div class="orb orb-empathy">
+                <span class="orb-icon">💖</span>
+                <div class="orb-content">
+                  <strong>Emotional Empathy</strong>
+                  <span>Mindful Heart</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -779,11 +827,11 @@
 
         <div class="campus-cta-strip">
           <div class="cta-strip-text">
-            <h4>Want to see the classrooms in person?</h4>
-            <p>Our Director of Admissions conducts private parent tours Tuesday through Saturday mornings.</p>
+            <h4>Campus Infrastructure in Final Preparation</h4>
+            <p>We are completing our new sensory garden walkways and atelier light pavilion for the upcoming cohort.</p>
           </div>
-          <button type="button" class="btn btn-primary btn-pill" data-open-tour>Schedule an In-Person
-            Walkthrough</button>
+          <button type="button" class="btn btn-primary btn-pill" data-open-tour>Register for Tour Opening
+            Access</button>
         </div>
       </div>
     </section>
@@ -876,177 +924,6 @@
 
         </div>
 
-      </div>
-    </section>
-
-
-    <!-- ==================== INTERACTIVE TUITION & CARE ESTIMATOR ==================== -->
-    <section class="estimator-section" id="estimator">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="section-tag tag-mint">Transparent Enrollment</span>
-          <h2 class="section-title">Hive Care &amp; Tuition Calculator</h2>
-          <p class="section-subtitle">
-            Tailor your family's schedule and instantly preview estimated monthly tuition, organic meal plans, and
-            extended hours.
-          </p>
-        </div>
-
-        <div class="estimator-grid">
-
-          <!-- Calculator Controls -->
-          <div class="calculator-card">
-            <h3 class="calculator-title">Build Your Child's Schedule</h3>
-
-            <!-- 1. Program Selection -->
-            <div class="form-group">
-              <label class="form-label" for="calcProgram">1. Select Age Program</label>
-              <div class="select-pill-group" id="calcProgram">
-                <button type="button" class="calc-pill-opt active" data-program="explorers" data-base="1450">
-                  <span>🍼 Tiny Explorers</span>
-                  <small>6–18m</small>
-                </button>
-                <button type="button" class="calc-pill-opt" data-program="bees" data-base="1350">
-                  <span>🐝 Busy Bees</span>
-                  <small>18m–3y</small>
-                </button>
-                <button type="button" class="calc-pill-opt" data-program="honeycombs" data-base="1250">
-                  <span>🍯 Honeycombs</span>
-                  <small>3–4.5y</small>
-                </button>
-                <button type="button" class="calc-pill-opt" data-program="kindergarten" data-base="1190">
-                  <span>🎓 Kindergarten</span>
-                  <small>4.5–6y</small>
-                </button>
-              </div>
-            </div>
-
-            <!-- 2. Days per Week -->
-            <div class="form-group">
-              <label class="form-label">2. Days Per Week</label>
-              <div class="days-toggle-group">
-                <button type="button" class="calc-day-opt" data-days="3" data-mult="0.75">3 Days (Mon, Wed,
-                  Fri)</button>
-                <button type="button" class="calc-day-opt" data-days="4" data-mult="0.90">4 Days (Mon – Thu)</button>
-                <button type="button" class="calc-day-opt active" data-days="5" data-mult="1.00">5 Days (Full
-                  Week)</button>
-              </div>
-            </div>
-
-            <!-- 3. Hours Tier -->
-            <div class="form-group">
-              <label class="form-label">3. Care Schedule Hours</label>
-              <div class="hours-radio-list">
-                <label class="radio-card">
-                  <input type="radio" name="hoursOption" value="half" data-add="0" checked>
-                  <span class="radio-content">
-                    <strong>Morning Wonder (8:00 AM – 12:30 PM)</strong>
-                    <small>Includes morning snack &amp; hot organic lunch</small>
-                  </span>
-                  <span class="radio-tag">Included</span>
-                </label>
-
-                <label class="radio-card">
-                  <input type="radio" name="hoursOption" value="full" data-add="220">
-                  <span class="radio-content">
-                    <strong>Full Day Hive (8:00 AM – 3:30 PM)</strong>
-                    <small>Includes lunch, nap rest, and afternoon atelier</small>
-                  </span>
-                  <span class="radio-tag">+ $220/mo</span>
-                </label>
-
-                <label class="radio-card">
-                  <input type="radio" name="hoursOption" value="extended" data-add="380">
-                  <span class="radio-content">
-                    <strong>Extended Care Club (8:00 AM – 6:00 PM)</strong>
-                    <small>Includes afternoon supper &amp; nature exploration club</small>
-                  </span>
-                  <span class="radio-tag">+ $380/mo</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- 4. Optional Add-ons -->
-            <div class="form-group">
-              <label class="form-label">4. Optional Enrichments</label>
-              <div class="addons-list">
-                <label class="checkbox-card">
-                  <input type="checkbox" id="addonBilingual" data-fee="95">
-                  <span class="custom-checkbox"></span>
-                  <span class="checkbox-text">
-                    <strong>Bilingual French / Spanish Immersion</strong>
-                    <small>Daily playful conversational songs with native speaker</small>
-                  </span>
-                  <span class="addon-price">+$95/mo</span>
-                </label>
-
-                <label class="checkbox-card">
-                  <input type="checkbox" id="addonMusic" data-fee="80">
-                  <span class="custom-checkbox"></span>
-                  <span class="checkbox-text">
-                    <strong>Orff Suzuki Violin &amp; Rhythm Lab</strong>
-                    <small>Weekly small-group violin and percussive harmony</small>
-                  </span>
-                  <span class="addon-price">+$80/mo</span>
-                </label>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Live Breakdown Summary Card -->
-          <div class="calculator-summary-card">
-            <div class="summary-top">
-              <div class="summary-badge">⚡ Live Estimate</div>
-              <h4 class="summary-heading">Estimated Monthly Investment</h4>
-              <div class="price-display">
-                <span class="currency">$</span>
-                <span class="price-number" id="calcTotalPrice">1,450</span>
-                <span class="period">/ month</span>
-              </div>
-              <p class="summary-note">All taxes, curriculum materials, organic chef meals, and live parent portal
-                included.</p>
-            </div>
-
-            <div class="summary-breakdown">
-              <div class="breakdown-row">
-                <span id="breakdownProgramName">Tiny Explorers (5 Days)</span>
-                <span id="breakdownBasePrice">$1,450</span>
-              </div>
-              <div class="breakdown-row">
-                <span id="breakdownHoursName">Morning Wonder (8:00–12:30)</span>
-                <span id="breakdownHoursPrice">$0</span>
-              </div>
-              <div class="breakdown-row" id="breakdownAddonsRow" hidden>
-                <span>Selected Enrichments</span>
-                <span id="breakdownAddonsPrice">+$0</span>
-              </div>
-              <div class="breakdown-row total-row">
-                <strong>Net Monthly Investment</strong>
-                <strong id="breakdownFinalTotal">$1,450</strong>
-              </div>
-            </div>
-
-            <div class="summary-inclusions">
-              <strong>Always Included in Every Enrollment:</strong>
-              <ul>
-                <li>🌿 100% Organic Breakfast, Hot Lunch &amp; Snacks</li>
-                <li>📱 Access to Live Parent Portal &amp; Daily Photos</li>
-                <li>🎨 All Atelier Canvas, Clay &amp; Sensory Materials</li>
-                <li>🩺 Full On-site Pediatric First-Aid Nurse Coverage</li>
-                <li>🧺 Hypoallergenic Laundry &amp; Diaper Care Essentials</li>
-              </ul>
-            </div>
-
-            <div class="summary-cta">
-              <button type="button" class="btn btn-primary btn-block btn-pill" data-open-tour>
-                Lock In This Rate &amp; Book Tour
-              </button>
-              <p class="cta-guarantee">🔒 No application fee required for open house attendees.</p>
-            </div>
-          </div>
-
-        </div>
       </div>
     </section>
 
@@ -1192,7 +1069,7 @@
     </section>
 
 
-    <!-- ==================== FINAL ENROLLMENT BANNER ==================== -->
+    <!-- ==================== FINAL INQUIRY BANNER ==================== -->
     <section class="cta-banner-section">
       <div class="container">
         <div class="cta-banner-card">
@@ -1201,15 +1078,15 @@
             <span class="banner-pill">🐝 Come Buzz With Us</span>
             <h2 class="banner-title">Give Your Little One the Most Magical Foundation.</h2>
             <p class="banner-desc">
-              Schedule a tranquil morning visit to The Tiny Hive. Meet our warm educators, smell the fresh lavender
-              garden, and watch our happy children in action.
+              We are currently putting the finishing touches on our new learning studios and nature gardens. Register
+              your interest to receive early access when tour reservations go live.
             </p>
             <div class="banner-buttons">
               <button type="button" class="btn btn-dark btn-lg btn-pill" data-open-tour>
-                Book a Private Discovery Tour
+                Register Priority Interest
               </button>
               <a href="tel:5552899448" class="btn btn-white-translucent btn-lg btn-pill">
-                📞 Call Admissions: (555) 289-9448
+                📞 Call Admissions: +91 812 985 1212
               </a>
             </div>
           </div>
@@ -1260,8 +1137,8 @@
           <li><a href="#philosophy">Our Philosophy</a></li>
           <li><a href="#campus">Campus &amp; Facilities</a></li>
           <li><a href="#daily-rhythm">Daily Rhythm Schedule</a></li>
-          <li><a href="#estimator">Tuition Calculator</a></li>
           <li><a href="#reviews">Parent Testimonials</a></li>
+          <li><a href="#standards">Safety &amp; Care</a></li>
         </ul>
       </div>
 
@@ -1279,7 +1156,7 @@
           <span class="contact-icon">⏰</span>
           <div>
             <strong>School Hours:</strong>
-            <span>Mon – Fri: 7:45 AM – 6:00 PM<br>Saturday Open House: 9:00 AM – 1:00 PM</span>
+            <span>Mon – Fri: 7:45 AM – 6:00 PM<br>Admissions Desk: 9:00 AM – 4:00 PM</span>
           </div>
         </div>
         <div class="footer-contact-item">
@@ -1295,7 +1172,7 @@
       <div class="footer-col">
         <h4 class="footer-col-title">The Honey Gazette</h4>
         <p class="newsletter-sub">
-          Receive gentle parenting insights, early childhood creative activities, and enrollment notices.
+          Receive gentle parenting insights, early childhood creative activities, and tour opening announcements.
         </p>
         <form class="newsletter-form" id="newsletterForm" onsubmit="return false;">
           <div class="newsletter-input-group">
@@ -1330,19 +1207,21 @@
   </footer>
 
 
-  <!-- ==================== MODAL: SCHEDULE A HIVE TOUR ==================== -->
+  <!-- ==================== MODAL: ADMISSIONS & TOUR WAITLIST ==================== -->
   <dialog class="tour-dialog" id="tourDialog" aria-labelledby="dialogTitle">
     <div class="dialog-card">
       <button type="button" class="dialog-close-btn" id="closeTourDialogBtn"
-        aria-label="Close booking modal">&times;</button>
+        aria-label="Close inquiry modal">&times;</button>
 
       <!-- Step 1: Form -->
       <div class="dialog-form-view" id="dialogFormView">
         <div class="dialog-header text-center">
-          <div class="dialog-badge">🐝 Personal Discovery Visit</div>
-          <h3 class="dialog-title" id="dialogTitle">Book a Visit to The Tiny Hive</h3>
-          <p class="dialog-subtitle">Experience our sunlit studios, meet dedicated teachers, and see little bees
-            thriving.</p>
+          <div class="dialog-badge">🐝 Tours Opening Soon</div>
+          <h3 class="dialog-title" id="dialogTitle">Register for Priority Tour Access</h3>
+          <p class="dialog-subtitle">
+            Our campus is currently setting up our new learning studios and nature gardens. Be the first to be invited
+            as soon as private tour dates open!
+          </p>
         </div>
 
         <form class="tour-form" id="tourBookingForm" onsubmit="return false;">
@@ -1360,7 +1239,7 @@
           <div class="form-row-2">
             <div class="form-field">
               <label for="parentPhone" class="field-label">Phone Number *</label>
-              <input type="tel" id="parentPhone" class="field-input" placeholder="(555) 000-0000" required>
+              <input type="tel" id="parentPhone" class="field-input" placeholder="987 654 3210" required>
             </div>
             <div class="form-field">
               <label for="childAgeGroup" class="field-label">Child's Age Group *</label>
@@ -1376,28 +1255,32 @@
 
           <div class="form-row-2">
             <div class="form-field">
-              <label for="tourDate" class="field-label">Preferred Tour Date *</label>
-              <input type="date" id="tourDate" class="field-input" required>
+              <label for="expectedYear" class="field-label">Target Cohort *</label>
+              <select id="expectedYear" class="field-input" required>
+                <option value="autumn2026" selected>Autumn 2026 Cohort</option>
+                <option value="spring2027">Spring 2027 Cohort</option>
+                <option value="autumn2027">Autumn 2027 Cohort</option>
+              </select>
             </div>
             <div class="form-field">
-              <label for="tourSlot" class="field-label">Preferred Time Window *</label>
-              <select id="tourSlot" class="field-input" required>
-                <option value="morning">Morning Circle (09:30 AM – 10:30 AM)</option>
-                <option value="garden">Garden &amp; Mud Play (10:30 AM – 11:30 AM)</option>
-                <option value="afternoon">Afternoon Atelier (02:30 PM – 03:30 PM)</option>
+              <label for="preferredTime" class="field-label">Preferred Tour Time Window</label>
+              <select id="preferredTime" class="field-input">
+                <option value="morning">Morning (9:30 AM – 11:30 AM)</option>
+                <option value="afternoon">Afternoon (2:00 PM – 4:00 PM)</option>
+                <option value="saturday">Saturday Open House</option>
               </select>
             </div>
           </div>
 
           <div class="form-field">
-            <label for="tourNotes" class="field-label">Special Questions or Dietary/Allergy Notes (Optional)</label>
+            <label for="tourNotes" class="field-label">Questions or Notes for Our Educators (Optional)</label>
             <textarea id="tourNotes" class="field-input field-textarea" rows="2"
-              placeholder="Tell us about your little one's interests, milestones, or questions..."></textarea>
+              placeholder="Tell us about your child's milestones or any specific interests..."></textarea>
           </div>
 
           <div class="dialog-action-row">
             <button type="submit" class="btn btn-primary btn-lg btn-pill btn-block" id="submitTourBtn">
-              Confirm &amp; Reserve Private Visit
+              Join Priority Tour Notification List
             </button>
           </div>
         </form>
@@ -1409,14 +1292,14 @@
           <div class="success-bee">🐝</div>
           <div class="success-checkmark">✓</div>
         </div>
-        <h3 class="success-title">Your Hive Visit is Reserved!</h3>
+        <h3 class="success-title">You're on the Priority List!</h3>
         <p class="success-msg" id="successMsgText">
-          We can't wait to welcome you and your little bee! A confirmation and campus parking pass have been dispatched
-          to your email.
+          Thank you! As soon as our campus infrastructure setup is complete, you will receive an exclusive early-booking
+          link to choose your private walkthrough slot.
         </p>
         <div class="success-recap-box" id="successRecapBox">
-          <div><strong>Date:</strong> <span id="recapDate">Tuesday, Oct 12</span></div>
-          <div><strong>Time:</strong> <span id="recapTime">09:30 AM (Morning Circle)</span></div>
+          <div><strong>Cohort:</strong> <span id="recapDate">Autumn 2026</span></div>
+          <div><strong>Preferred Time:</strong> <span id="recapTime">Morning Window</span></div>
           <div><strong>Program:</strong> <span id="recapProgram">Busy Bees (18m – 3 yrs)</span></div>
         </div>
         <button type="button" class="btn btn-primary btn-pill" id="finishBookingBtn">Done &amp; Return to The
@@ -1428,7 +1311,7 @@
 
   <!-- Floating Quick WhatsApp/Phone Badge for Instant Parent Support -->
   <div class="floating-quick-help">
-    <a href="tel:5552899448" class="quick-help-pill" aria-label="Call Admissions">
+    <a href="tel:+918129851212" class="quick-help-pill" aria-label="Call Admissions">
       <span class="quick-help-icon">📞</span>
       <span class="quick-help-text">Admissions Direct</span>
     </a>

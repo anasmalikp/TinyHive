@@ -1,6 +1,6 @@
 /**
  * THE TINY HIVE - EARLY YEAR FOUNDATION SCHOOL
- * Interactive Logic, Audio Chimes, Calculator & Animations
+ * Interactive Logic, Audio Chimes, Mobile Drawer & Modal Handlers
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -86,11 +86,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ==========================================================================
-     2. Sticky Header & Mobile Nav Drawer
+     2. Sticky Header & Enhanced Mobile Nav Drawer with Backdrop
      ========================================================================== */
   const header = document.getElementById('header');
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const mainNav = document.getElementById('main-nav');
+  const navBackdrop = document.getElementById('navBackdrop');
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 20) {
@@ -100,19 +101,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, { passive: true });
 
+  function closeMobileNav() {
+    mobileMenuBtn?.setAttribute('aria-expanded', 'false');
+    mainNav?.classList.remove('open');
+    navBackdrop?.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function openMobileNav() {
+    mobileMenuBtn?.setAttribute('aria-expanded', 'true');
+    mainNav?.classList.add('open');
+    navBackdrop?.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
   if (mobileMenuBtn && mainNav) {
     mobileMenuBtn.addEventListener('click', () => {
       const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
-      mobileMenuBtn.setAttribute('aria-expanded', String(!isExpanded));
-      mainNav.classList.toggle('open', !isExpanded);
+      if (isExpanded) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
     });
 
+    // Close on backdrop tap
+    navBackdrop?.addEventListener('click', closeMobileNav);
+
     // Close mobile menu on clicking any navigation link
-    mainNav.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenuBtn.setAttribute('aria-expanded', 'false');
-        mainNav.classList.remove('open');
-      });
+    mainNav.querySelectorAll('.nav-link, button').forEach(link => {
+      link.addEventListener('click', closeMobileNav);
     });
   }
 
@@ -351,112 +369,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ==========================================================================
-     8. Interactive Tuition & Care Estimator
-     ========================================================================== */
-  const calcProgramOpts = document.querySelectorAll('.calc-pill-opt');
-  const calcDayOpts = document.querySelectorAll('.calc-day-opt');
-  const hoursRadios = document.querySelectorAll('input[name="hoursOption"]');
-  const addonBilingual = document.getElementById('addonBilingual');
-  const addonMusic = document.getElementById('addonMusic');
-
-  // Summary display fields
-  const calcTotalPriceElem = document.getElementById('calcTotalPrice');
-  const breakdownProgramName = document.getElementById('breakdownProgramName');
-  const breakdownBasePrice = document.getElementById('breakdownBasePrice');
-  const breakdownHoursName = document.getElementById('breakdownHoursName');
-  const breakdownHoursPrice = document.getElementById('breakdownHoursPrice');
-  const breakdownAddonsRow = document.getElementById('breakdownAddonsRow');
-  const breakdownAddonsPrice = document.getElementById('breakdownAddonsPrice');
-  const breakdownFinalTotal = document.getElementById('breakdownFinalTotal');
-
-  let currentProgram = 'explorers';
-  let currentProgramLabel = 'Tiny Explorers';
-  let currentBase = 1450;
-  let currentDaysMult = 1.0;
-  let currentDaysLabel = '5 Days';
-  let currentHoursFee = 0;
-  let currentHoursLabel = 'Morning Wonder (8:00–12:30)';
-
-  function updateTuitionCalculation() {
-    // Calculate base with days multiplier
-    const adjustedBase = Math.round(currentBase * currentDaysMult);
-    
-    // Addons
-    let addonsTotal = 0;
-    if (addonBilingual && addonBilingual.checked) {
-      addonsTotal += parseInt(addonBilingual.getAttribute('data-fee') || '0', 10);
-    }
-    if (addonMusic && addonMusic.checked) {
-      addonsTotal += parseInt(addonMusic.getAttribute('data-fee') || '0', 10);
-    }
-
-    const netTotal = adjustedBase + currentHoursFee + addonsTotal;
-
-    // Update Summary UI
-    if (calcTotalPriceElem) calcTotalPriceElem.textContent = netTotal.toLocaleString('en-US');
-    if (breakdownProgramName) breakdownProgramName.textContent = `${currentProgramLabel} (${currentDaysLabel})`;
-    if (breakdownBasePrice) breakdownBasePrice.textContent = `$${adjustedBase.toLocaleString('en-US')}`;
-    if (breakdownHoursName) breakdownHoursName.textContent = currentHoursLabel;
-    if (breakdownHoursPrice) breakdownHoursPrice.textContent = currentHoursFee === 0 ? '$0' : `+$${currentHoursFee}`;
-
-    if (breakdownAddonsRow && breakdownAddonsPrice) {
-      if (addonsTotal > 0) {
-        breakdownAddonsRow.removeAttribute('hidden');
-        breakdownAddonsPrice.textContent = `+$${addonsTotal}`;
-      } else {
-        breakdownAddonsRow.setAttribute('hidden', '');
-      }
-    }
-
-    if (breakdownFinalTotal) breakdownFinalTotal.textContent = `$${netTotal.toLocaleString('en-US')}`;
-  }
-
-  // Program selection
-  calcProgramOpts.forEach(btn => {
-    btn.addEventListener('click', () => {
-      calcProgramOpts.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentProgram = btn.getAttribute('data-program') || 'explorers';
-      currentBase = parseInt(btn.getAttribute('data-base') || '1450', 10);
-      currentProgramLabel = btn.querySelector('span')?.textContent || 'Program';
-      updateTuitionCalculation();
-    });
-  });
-
-  // Days selection
-  calcDayOpts.forEach(btn => {
-    btn.addEventListener('click', () => {
-      calcDayOpts.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentDaysMult = parseFloat(btn.getAttribute('data-mult') || '1.0');
-      const daysCount = btn.getAttribute('data-days');
-      currentDaysLabel = `${daysCount} Days`;
-      updateTuitionCalculation();
-    });
-  });
-
-  // Hours selection
-  hoursRadios.forEach(radio => {
-    radio.addEventListener('change', () => {
-      if (radio.checked) {
-        currentHoursFee = parseInt(radio.getAttribute('data-add') || '0', 10);
-        const titleStrong = radio.closest('.radio-card')?.querySelector('strong');
-        currentHoursLabel = titleStrong ? titleStrong.textContent.split('(')[0].trim() : 'Schedule';
-        updateTuitionCalculation();
-      }
-    });
-  });
-
-  // Addons
-  if (addonBilingual) addonBilingual.addEventListener('change', updateTuitionCalculation);
-  if (addonMusic) addonMusic.addEventListener('change', updateTuitionCalculation);
-
-  // Initial calculation run
-  updateTuitionCalculation();
-
-
-  /* ==========================================================================
-     9. Schedule a Hive Tour Modal (<dialog>)
+     8. Admissions & Tour Priority Waitlist Modal (<dialog>)
      ========================================================================== */
   const tourDialog = document.getElementById('tourDialog');
   const closeTourDialogBtn = document.getElementById('closeTourDialogBtn');
@@ -465,18 +378,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const dialogSuccessView = document.getElementById('dialogSuccessView');
   const finishBookingBtn = document.getElementById('finishBookingBtn');
   const childAgeSelect = document.getElementById('childAgeGroup');
-  const tourDateInput = document.getElementById('tourDate');
-
-  // Set min date to tomorrow
-  if (tourDateInput) {
-    const tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    const yyyy = tomorrow.getFullYear();
-    const mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
-    const dd = String(tomorrow.getDate()).padStart(2, '0');
-    tourDateInput.min = `${yyyy}-${mm}-${dd}`;
-    tourDateInput.value = `${yyyy}-${mm}-${dd}`;
-  }
 
   function openTourDialog(preselectedProgram = '') {
     if (!tourDialog) return;
@@ -508,7 +409,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-open-tour]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const preselect = btn.getAttribute('data-program-preselect') || currentProgram;
+      const preselect = btn.getAttribute('data-program-preselect') || '';
       openTourDialog(preselect);
     });
   });
@@ -530,14 +431,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Handle Booking Form Submit
+  // Handle Waitlist Form Submit
   tourBookingForm?.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const parentName = document.getElementById('parentName')?.value || 'Valued Parent';
     const chosenAge = childAgeSelect?.options[childAgeSelect.selectedIndex]?.text || 'Early Years';
-    const chosenDate = tourDateInput?.value || 'Upcoming Tuesday';
-    const chosenSlot = document.getElementById('tourSlot')?.options[document.getElementById('tourSlot').selectedIndex]?.text || 'Morning Circle';
+    const expectedYearSelect = document.getElementById('expectedYear');
+    const chosenCohort = expectedYearSelect?.options[expectedYearSelect.selectedIndex]?.text || 'Autumn 2026';
+    const prefTimeSelect = document.getElementById('preferredTime');
+    const chosenTime = prefTimeSelect?.options[prefTimeSelect.selectedIndex]?.text || 'Morning Window';
 
     // Populate Recap
     const recapDate = document.getElementById('recapDate');
@@ -545,11 +448,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const recapProgram = document.getElementById('recapProgram');
     const successMsg = document.getElementById('successMsgText');
 
-    if (recapDate) recapDate.textContent = chosenDate;
-    if (recapTime) recapTime.textContent = chosenSlot;
+    if (recapDate) recapDate.textContent = chosenCohort;
+    if (recapTime) recapTime.textContent = chosenTime;
     if (recapProgram) recapProgram.textContent = chosenAge;
     if (successMsg) {
-      successMsg.textContent = `Thank you, ${parentName}! We can't wait to welcome your family to The Tiny Hive. A calendar invite & directions have been sent to your email.`;
+      successMsg.textContent = `Thank you, ${parentName}! Your family is registered for priority notification. As soon as campus infrastructure setup is complete, you will receive an exclusive early invite to book your tour.`;
     }
 
     // Switch view
@@ -563,7 +466,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ==========================================================================
-     10. Newsletter Form Submission
+     9. Newsletter Form Submission
      ========================================================================== */
   const newsletterForm = document.getElementById('newsletterForm');
   const newsletterFeedback = document.getElementById('newsletterFeedback');
@@ -583,7 +486,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ==========================================================================
-     11. Celebratory Confetti Animation (Canvas)
+     10. Celebratory Confetti Animation (Canvas)
      ========================================================================== */
   const canvas = document.getElementById('confettiCanvas');
   let confettiCtx = null;
@@ -660,12 +563,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ==========================================================================
-     12. Progressive Fallback for Scroll Reveal (modern-web-guidance)
+     11. Progressive Fallback for Scroll Reveal (modern-web-guidance)
      Applies IntersectionObserver when CSS view-timeline is not supported
      ========================================================================== */
   if (!CSS.supports('(animation-timeline: view()) and (animation-range: entry)')) {
     const revealTargets = document.querySelectorAll(
-      '.pillar-card, .campus-card, .review-card, .safety-card, .calculator-card, .calculator-summary-card, .rhythm-display-card'
+      '.pillar-card, .campus-card, .review-card, .safety-card, .rhythm-display-card'
     );
 
     const revealObserver = new IntersectionObserver((entries) => {
