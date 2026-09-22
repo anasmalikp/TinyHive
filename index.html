@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Tiny Hive | Early Year Foundation School</title>
+  <meta name="description" content="The Tiny Hive is a premier early year foundation school for children aged 6 months to 6 years. Nurturing curious little minds with nature, creativity, and love.">
+  <meta name="keywords" content="early learning academy, preschool, nursery school, early years foundation stage, EYFS, kindergarten, The Tiny Hive">
+  <meta name="theme-color" content="#FFB800">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="The Tiny Hive | Early Year Foundation School">
+  <meta property="og:description" content="Where curious little minds blossom & buzz with joy. Reggio & Montessori inspired early childhood education.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/hero_kids.jpg">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐝</text></svg>">
+
+  <!-- Google Fonts: Fredoka (Headings) & Plus Jakarta Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating Background Honeycombs & Ambient Glows -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow glow-3" aria-hidden="true"></div>
+
+  <!-- Announcement Ticker -->
+  <aside class="top-announcement" aria-label="Announcement banner">
+    <div class="container announcement-inner">
+      <span class="announcement-pill">✨ Admissions 2026–2027</span>
+      <p class="announcement-text">Limited spots available for Autumn Cohort! <strong>Open House Saturday, Oct 10th.</strong></p>
+      <a href="#tour-modal-trigger" class="announcement-link" data-open-tour>RSVP for Open House &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- Sticky Header / Nav -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <!-- Logo -->
+      <a href="#hero" class="brand-logo" aria-label="The Tiny Hive Home">
+        <div class="logo-icon-wrapper">
+          <svg class="logo-honeycomb" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <polygon points="30,3 56,18 56,48 30,63 4,48 4,18" fill="url(#honeyGrad)" stroke="#FFA000" stroke-width="2"/>
+            <defs>
+              <linearGradient id="honeyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFE169"/>
+                <stop offset="100%" stop-color="#FFB800"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="bee-mascot-mini" aria-hidden="true">🐝</span>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">The Tiny Hive</span>
+          <span class="logo-tagline">Early Year Foundation School</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#programs" class="nav-link">Programs</a></li>
+          <li><a href="#philosophy" class="nav-link">Philosophy</a></li>
+          <li><a href="#campus" class="nav-link">Campus</a></li>
+          <li><a href="#daily-rhythm" class="nav-link">Daily Rhythm</a></li>
+          <li><a href="#estimator" class="nav-link">Tuition</a></li>
+          <li><a href="#reviews" class="nav-link">Wall of Love</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header CTAs & Interactive Controls -->
+      <div class="header-actions">
+        <!-- Playful Chime Sound Toggle (Web Audio API) -->
+        <button type="button" class="icon-toggle-btn" id="soundToggleBtn" aria-label="Toggle joyful sound effects" title="Playful chimes sound toggle">
+          <span class="sound-icon sound-off">🔇</span>
+          <span class="sound-icon sound-on hidden">🔔</span>
+        </button>
+
+        <button type="button" class="btn btn-primary btn-sm btn-pill" id="tour-modal-trigger" data-open-tour>
+          <span class="btn-sparkle">✨</span> Book a Tour
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <div class="hero-badge animate-fade-in">
+            <span class="badge-dot"></span>
+            <span>Where Early Wonder Becomes Lifelong Curiosity</span>
+          </div>
+
+          <h1 class="hero-title animate-fade-in-up">
+            Where Curious Little Minds <span class="highlight-underline text-gradient-amber">Blossom &amp; Buzz</span> with Joy.
+          </h1>
+
+          <p class="hero-description animate-fade-in-up delay-1">
+            Welcome to <strong>The Tiny Hive</strong>, an enriching early year foundation school designed for children aged <strong>6 months to 6 years</strong>. We merge the warmth of home with Reggio Emilia inspired discovery, nature play, and emotional intelligence.
+          </p>
+
+          <div class="hero-cta-group animate-fade-in-up delay-2">
+            <button type="button" class="btn btn-primary btn-lg btn-pill btn-bounce" data-open-tour>
+              <span>Schedule a Hive Visit</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+            <a href="#programs" class="btn btn-outline btn-lg btn-pill">
+              <span>Explore Programs</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges & Ratios -->
+          <div class="hero-trust-grid animate-fade-in-up delay-3">
+            <div class="trust-item">
+              <div class="trust-icon bg-yellow-soft">👶</div>
+              <div class="trust-text">
+                <strong>1 : 4 Ratio</strong>
+                <span>Nurturing, attentive care</span>
+              </div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon bg-mint-soft">🌱</div>
+              <div class="trust-text">
+                <strong>100% Organic</strong>
+                <span>Chef-made whole foods</span>
+              </div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon bg-coral-soft">🌻</div>
+              <div class="trust-text">
+                <strong>Forest Play</strong>
+                <span>Daily outdoor exploration</span>
+              </div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon bg-lilac-soft">🛡️</div>
+              <div class="trust-text">
+                <strong>EYFS Gold</strong>
+                <span>Excellence certified</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Composition -->
+        <div class="hero-visual-wrapper animate-fade-in-up delay-1">
+          <div class="hero-image-card">
+            <img src="assets/images/hero_kids.jpg" alt="Children happily playing with natural wooden toys in sunlit Tiny Hive classroom" class="hero-main-img" width="800" height="600" fetchpriority="high">
+            <div class="image-overlay-glow"></div>
+
+            <!-- Floating Interactive Card: Live Hive Activity -->
+            <div class="floating-badge badge-activity" id="activityBadge">
+              <div class="floating-icon">🎨</div>
+              <div class="floating-content">
+                <span class="badge-label">Happening Right Now</span>
+                <strong class="badge-value" id="currentActivityText">Sensory Clay &amp; Flower Atelier</strong>
+              </div>
+            </div>
+
+            <!-- Floating Interactive Card: Student Happiness -->
+            <div class="floating-badge badge-metric">
+              <div class="metric-avatars">
+                <span class="mini-avatar av-1">🧒</span>
+                <span class="mini-avatar av-2">👧</span>
+                <span class="mini-avatar av-3">👶</span>
+              </div>
+              <div class="floating-content">
+                <div class="stars-row">★★★★★</div>
+                <strong class="badge-value">99.4% Parent Joy Score</strong>
+              </div>
+            </div>
+
+            <!-- Playful Floating Bee Mascot -->
+            <div class="floating-bee" aria-hidden="true">
+              <div class="bee-body">
+                <span class="bee-wing wing-left"></span>
+                <span class="bee-wing wing-right"></span>
+                <span class="bee-character">🐝</span>
+              </div>
+              <span class="buzz-trail"></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== BUZZ BAR: 4 PILLARS OF WONDER ==================== -->
+    <section class="pillars-section" id="pillars">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag tag-amber">The Hive Foundation</span>
+          <h2 class="section-title">Four Pillars of Early Wonder</h2>
+          <p class="section-subtitle">
+            Every day in The Tiny Hive is intentionally crafted to spark curiosity, cultivate empathy, and build natural confidence.
+          </p>
+        </div>
+
+        <div class="pillars-grid">
+          <!-- Pillar 1 -->
+          <article class="pillar-card card-amber">
+            <div class="pillar-top">
+              <div class="pillar-icon-box">🍯</div>
+              <span class="pillar-number">01</span>
+            </div>
+            <h3 class="pillar-title">Sensory Exploration</h3>
+            <p class="pillar-desc">
+              From textured clay and water cascades to botanical scents, children discover their world through tactile, sensory-rich play that builds neural pathways.
+            </p>
+            <ul class="pillar-perks">
+              <li>Open-ended natural wooden materials</li>
+              <li>Light table &amp; refraction discovery</li>
+              <li>Montessori sensorial mastery</li>
+            </ul>
+          </article>
+
+          <!-- Pillar 2 -->
+          <article class="pillar-card card-mint">
+            <div class="pillar-top">
+              <div class="pillar-icon-box">🌿</div>
+              <span class="pillar-number">02</span>
+            </div>
+            <h3 class="pillar-title">Nature &amp; Mud Garden</h3>
+            <p class="pillar-desc">
+              Rain or shine, our children spend minimum 2 hours outdoors daily in our biodiverse sensory garden, mud kitchen, and mini orchard cultivating love for nature.
+            </p>
+            <ul class="pillar-perks">
+              <li>Seed-to-plate organic veggie plots</li>
+              <li>Bug hotels &amp; butterfly observation</li>
+              <li>Natural balance beam logs &amp; climbing</li>
+            </ul>
+          </article>
+
+          <!-- Pillar 3 -->
+          <article class="pillar-card card-coral">
+            <div class="pillar-top">
+              <div class="pillar-icon-box">🎨</div>
+              <span class="pillar-number">03</span>
+            </div>
+            <h3 class="pillar-title">Atelier Arts &amp; STEAM</h3>
+            <p class="pillar-desc">
+              Reggio Emilia inspired ateliers where children explore the "Hundred Languages"—expressing thoughts via watercolor, loose parts sculpture, and early geometry.
+            </p>
+            <ul class="pillar-perks">
+              <li>Artist-in-residence workshops</li>
+              <li>Child-led tinker and building labs</li>
+              <li>Orff music &amp; rhythm storytelling</li>
+            </ul>
+          </article>
+
+          <!-- Pillar 4 -->
+          <article class="pillar-card card-lilac">
+            <div class="pillar-top">
+              <div class="pillar-icon-box">💜</div>
+              <span class="pillar-number">04</span>
+            </div>
+            <h3 class="pillar-title">Emotional Empathy</h3>
+            <p class="pillar-desc">
+              Nurturing compassionate little humans. We coach emotional labeling, conflict problem-solving, mindful breathing, and deep peer collaboration in gentle circles.
+            </p>
+            <ul class="pillar-perks">
+              <li>Cozy quiet nook &amp; calm-down pods</li>
+              <li>Morning gratitude &amp; song circles</li>
+              <li>Positive communication scaffolding</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== PROGRAMS & AGE GROUPS ==================== -->
+    <section class="programs-section" id="programs">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag tag-mint">Tailored For Every Stage</span>
+          <h2 class="section-title">Age-Crafted Hive Programs</h2>
+          <p class="section-subtitle">
+            Thoughtfully balanced developmental programs catering to your child's distinct milestone windows.
+          </p>
+        </div>
+
+        <!-- Interactive Program Selector Tabs -->
+        <div class="program-tabs-wrapper">
+          <div class="program-tabs-nav" role="tablist" aria-label="Select age program">
+            <button type="button" class="tab-btn active" role="tab" id="tab-explorers" aria-selected="true" aria-controls="panel-explorers" data-tab="explorers">
+              <span class="tab-icon">🍼</span>
+              <span class="tab-label">
+                <strong>Tiny Explorers</strong>
+                <small>6 – 18 Months</small>
+              </span>
+            </button>
+            <button type="button" class="tab-btn" role="tab" id="tab-bees" aria-selected="false" aria-controls="panel-bees" data-tab="bees">
+              <span class="tab-icon">🐝</span>
+              <span class="tab-label">
+                <strong>Busy Bees</strong>
+                <small>18 Months – 3 Years</small>
+              </span>
+            </button>
+            <button type="button" class="tab-btn" role="tab" id="tab-honeycombs" aria-selected="false" aria-controls="panel-honeycombs" data-tab="honeycombs">
+              <span class="tab-icon">🍯</span>
+              <span class="tab-label">
+                <strong>Little Honeycombs</strong>
+                <small>3 – 4.5 Years</small>
+              </span>
+            </button>
+            <button type="button" class="tab-btn" role="tab" id="tab-kindergarten" aria-selected="false" aria-controls="panel-kindergarten" data-tab="kindergarten">
+              <span class="tab-icon">🎓</span>
+              <span class="tab-label">
+                <strong>Hive Kindergarten</strong>
+                <small>4.5 – 6 Years</small>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Program Content Panels -->
+        <div class="program-panels-container">
+          
+          <!-- Panel 1: Tiny Explorers -->
+          <div class="program-panel active" id="panel-explorers" role="tabpanel" aria-labelledby="tab-explorers">
+            <div class="panel-grid">
+              <div class="panel-details">
+                <div class="panel-badge-row">
+                  <span class="pill-badge pill-yellow">Ages: 6 – 18 Months</span>
+                  <span class="pill-badge pill-mint">Educator Ratio: 1:3</span>
+                  <span class="pill-badge pill-purple">Schedule: 3, 4 or 5 Days</span>
+                </div>
+                <h3 class="panel-heading">Gentle Beginnings, Sensory Trust &amp; Motor Discovery</h3>
+                <p class="panel-description">
+                  A serene, shoeless nest designed for infants and pre-toddlers to safely crawl, climb low wooden terraces, and explore safe sensory objects under the constant loving gaze of dedicated primary caregivers.
+                </p>
+
+                <div class="panel-features-grid">
+                  <div class="feature-box">
+                    <span class="feature-icon">✨</span>
+                    <strong>Sensory Heuristic Baskets</strong>
+                    <p>Natural woods, metals, silks, and sea sponges for sensory richness.</p>
+                  </div>
+                  <div class="feature-box">
+                    <span class="feature-icon">🎵</span>
+                    <strong>Lullaby &amp; Sign Language</strong>
+                    <p>Early communication using baby sign to reduce toddler frustration.</p>
+                  </div>
+                  <div class="feature-box">
+                    <span class="feature-icon">🌿</span>
+                    <strong>Fresh-Air Stroller Safaris</strong>
+                    <p>Gentle daily strolls around the campus botanical gardens.</p>
+                  </div>
+                  <div class="feature-box">
+                    <span class="feature-icon">😴</span>
+                    <strong>Circadian Sleep Nests</strong>
+                    <p>Individualized quiet cots synchronized with home sleep rhythms.</p>
+                  </div>
+                </div>
+
+                <div class="panel-action-bar">
+                  <button type="button" class="btn btn-primary btn-pill" data-open-tour data-program-preselect="explorers">Book Visit for Infant Nest</button>
+                  <a href="#estimator" class="btn btn-outline btn-pill">Calculate Tuition</a>
+                </div>
+              </div>
+
+              <div class="panel-visual">
+                <div class="panel-image-frame">
+                  <img src="assets/images/hero_kids.jpg" alt="Infants and toddlers exploring soft wooden sensory toys at The Tiny Hive" class="panel-img" loading="lazy">
+                  <div class="panel-floating-note">
+                    <span class="note-emoji">🍼</span>
+                    <span>1:3 dedicated educator ratio with individual feeding &amp; nap logs sent live to parent app.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Busy Bees -->
+          <div class="panel-grid program-panel" id="panel-bees" role="tabpanel" aria-labelledby="tab-bees" hidden>
+            <div class="panel-details">
+              <div class="panel-badge-row">
+                <span class="pill-badge pill-yellow">Ages: 18 Months – 3 Years</span>
+                <span class="pill-badge pill-mint">Educator Ratio: 1:4</span>
+                <span class="pill-badge pill-purple">Schedule: Full or Half Days</span>
+              </div>
+              <h3 class="panel-heading">Language Blossoming, Independence &amp; Muddy Joy</h3>
+              <p class="panel-description">
+                Toddlerhood is a glorious adventure of curiosity! Busy Bees master pouring their own water, putting on tiny boots, singing rhyming poetry, and building collaborative sandcastles in our garden.
+              </p>
+
+              <div class="panel-features-grid">
+                <div class="feature-box">
+                  <span class="feature-icon">🗣️</span>
+                  <strong>Vocabulary &amp; Story Weaving</strong>
+                  <p>Daily puppet theater, dialogue reading, and songs expanding spoken words.</p>
+                </div>
+                <div class="feature-box">
+                  <span class="feature-icon">🥣</span>
+                  <strong>Practical Life &amp; Snacking</strong>
+                  <p>Montessori toddler food prep: slicing bananas, pouring cups, cleaning spills.</p>
+                </div>
+                <div class="feature-box">
+                  <span class="feature-icon">🌻</span>
+                  <strong>Daily Mud Kitchen Laboratory</strong>
+                  <p>Making floral soups, mixing organic soils, and observing earthworms.</p>
+                </div>
+                <div class="feature-box">
+                  <span class="feature-icon">🚽</span>
+                  <strong>Gentle Toilet Learning</strong>
+                  <p>Stress-free, child-led toileting independence with patient educators.</p>
+                </div>
+              </div>
+
+              <div class="panel-action-bar">
+                <button type="button" class="btn btn-primary btn-pill" data-open-tour data-program-preselect="bees">Visit the Busy Bees Room</button>
+                <a href="#estimator" class="btn btn-outline btn-pill">Calculate Tuition</a>
+              </div>
+            </div>
+
+            <div class="panel-visual">
+              <div class="panel-image-frame">
+                <img src="assets/images/garden_play.jpg" alt="Toddlers exploring sunflowers and mud kitchen in nature garden" class="panel-img" loading="lazy">
+                <div class="panel-floating-note">
+                  <span class="note-emoji">🐝</span>
+                  <span>90% of toddler conflicts resolved through guided peer empathy sentences.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Little Honeycombs -->
+          <div class="panel-grid program-panel" id="panel-honeycombs" role="tabpanel" aria-labelledby="tab-honeycombs" hidden>
+            <div class="panel-details">
+              <div class="panel-badge-row">
+                <span class="pill-badge pill-yellow">Ages: 3 – 4.5 Years</span>
+                <span class="pill-badge pill-mint">Educator Ratio: 1:6</span>
+                <span class="pill-badge pill-purple">Schedule: 4 or 5 Days</span>
+              </div>
+              <h3 class="panel-heading">Emergent Phonics, STEAM Inquiry &amp; Masterpiece Art</h3>
+              <p class="panel-description">
+                Little Honeycombs are passionate investigators. They ask "Why is the sky blue?" and "How do bees make honey?" We build comprehensive investigative project webs around their natural interests.
+              </p>
+
+              <div class="panel-features-grid">
+                <div class="feature-box">
+                  <span class="feature-icon">🔤</span>
+                  <strong>Jolly Phonics &amp; Pre-Reading</strong>
+                  <p>Multisensory sound hunts, tactile sandpaper letters, and rich story decoding.</p>
+                </div>
+                <div class="feature-box">
+                  <span class="feature-icon">🔬</span>
+                  <strong>Hands-on Little STEAM</strong>
+                  <p>Magnets, water currents, ramp kinetics, and early classification puzzles.</p>
+                </div>
+                <div class="feature-box">
+                  <span class="feature-icon">🎨</span>
+                  <strong>Large-Scale Atelier Art</strong>
+                  <p>Easel painting, clay sculptures, charcoal sketching, and color theory.</p>
+                </div>
+                <div class="feature-box">
+                  <span class="feature-icon">🤝</span>
+                  <strong>Team Problem Solving</strong>
+                  <p>Collaborative tower building and puppet theatre script creating.</p>
+                </div>
+              </div>
+
+              <div class="panel-action-bar">
+                <button type="button" class="btn btn-primary btn-pill" data-open-tour data-program-preselect="honeycombs">Tour Little Honeycombs</button>
+                <a href="#estimator" class="btn btn-outline btn-pill">Calculate Tuition</a>
+              </div>
+            </div>
+
+            <div class="panel-visual">
+              <div class="panel-image-frame">
+                <img src="assets/images/art_atelier.jpg" alt="Children joyfully painting on wooden easels in art atelier" class="panel-img" loading="lazy">
+                <div class="panel-floating-note">
+                  <span class="note-emoji">🎨</span>
+                  <span>Every Honeycomb child completes their own curated art exhibition portfolio.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 4: Hive Kindergarten -->
+          <div class="panel-grid program-panel" id="panel-kindergarten" role="tabpanel" aria-labelledby="tab-kindergarten" hidden>
+            <div class="panel-details">
+              <div class="panel-badge-row">
+                <span class="pill-badge pill-yellow">Ages: 4.5 – 6 Years</span>
+                <span class="pill-badge pill-mint">Educator Ratio: 1:8</span>
+                <span class="pill-badge pill-purple">Schedule: Full Academic Day</span>
+              </div>
+              <h3 class="panel-heading">Primary School Readiness, Leadership &amp; Scientific Wonder</h3>
+              <p class="panel-description">
+                Our capstone year prepares confident, articulate, and empathetic learners ready to shine in any primary school. They master early mathematics, fluent reading, robotics basics, and public show-and-tell.
+              </p>
+
+              <div class="panel-features-grid">
+                <div class="feature-box">
+                  <span class="feature-icon">📚</span>
+                  <strong>Fluent Early Literacy</strong>
+                  <p>Creative journaling, writing their own storybooks, and phonemic mastery.</p>
+                </div>
+                <div class="feature-box">
+                  <span class="feature-icon">🔢</span>
+                  <strong>Conceptual Math &amp; Coding</strong>
+                  <p>Bead frames, tangible block coding, graphing, and measurement games.</p>
+                </div>
+                <div class="feature-box">
+                  <span class="feature-icon">🌍</span>
+                  <strong>Global Cultures &amp; Ecology</strong>
+                  <p>World geography, climate care, bee conservation, and Spanish immersion.</p>
+                </div>
+                <div class="feature-box">
+                  <span class="feature-icon">🌟</span>
+                  <strong>Public Speaking &amp; Leadership</strong>
+                  <p>Leading morning community meetings and presenting project discoveries.</p>
+                </div>
+              </div>
+
+              <div class="panel-action-bar">
+                <button type="button" class="btn btn-primary btn-pill" data-open-tour data-program-preselect="kindergarten">Book Kindergarten Discovery</button>
+                <a href="#estimator" class="btn btn-outline btn-pill">Calculate Tuition</a>
+              </div>
+            </div>
+
+            <div class="panel-visual">
+              <div class="panel-image-frame">
+                <img src="assets/images/reading_nook.jpg" alt="Kindergarten children reading together in cozy honeycomb library" class="panel-img" loading="lazy">
+                <div class="panel-floating-note">
+                  <span class="note-emoji">🎓</span>
+                  <span>100% of our Kindergarten graduates enter their top-choice primary schools with honors.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== PHILOSOPHY: 4 WINGS OF GROWTH ==================== -->
+    <section class="philosophy-section" id="philosophy">
+      <div class="container">
+        <div class="philosophy-layout">
+          <div class="philosophy-text">
+            <span class="section-tag tag-coral">Our Core Pedagogy</span>
+            <h2 class="section-title">The "Four Wings of Growth" Philosophy</h2>
+            <p class="lead-text">
+              We reject rigid, one-size-fits-all rote memorization. At The Tiny Hive, learning is an organic, joyful synthesis of British EYFS standards, Montessori practical mastery, and Reggio Emilia aesthetic wonder.
+            </p>
+
+            <div class="wings-accordion">
+              <div class="wing-item active" data-wing="1">
+                <div class="wing-header">
+                  <span class="wing-icon">🌱</span>
+                  <h4>Child as the Protagonist of Learning</h4>
+                  <span class="wing-chevron">&minus;</span>
+                </div>
+                <div class="wing-body">
+                  <p>Children are not empty vessels to be filled, but radiant individuals bursting with hypotheses. Our educators listen deeply, observe cues, and sculpt the curriculum around what ignites each child's spark.</p>
+                </div>
+              </div>
+
+              <div class="wing-item" data-wing="2">
+                <div class="wing-header">
+                  <span class="wing-icon">🏛️</span>
+                  <h4>The Environment as the Third Teacher</h4>
+                  <span class="wing-chevron">&plus;</span>
+                </div>
+                <div class="wing-body" hidden>
+                  <p>Every inch of our academy is intentionally curated with natural wood, ambient warm lighting, non-toxic materials, low shelving, and open spaces that entice autonomous decision-making.</p>
+                </div>
+              </div>
+
+              <div class="wing-item" data-wing="3">
+                <div class="wing-header">
+                  <span class="wing-icon">🐝</span>
+                  <h4>The Hive Community &amp; Family Partnership</h4>
+                  <span class="wing-chevron">&plus;</span>
+                </div>
+                <div class="wing-body" hidden>
+                  <p>Parents are our co-educators. We share real-time developmental documentation, photos, and monthly family picnic ateliers so you are always intimately connected to your little bee's growth.</p>
+                </div>
+              </div>
+
+              <div class="wing-item" data-wing="4">
+                <div class="wing-header">
+                  <span class="wing-icon">🎨</span>
+                  <h4>The Hundred Languages of Expression</h4>
+                  <span class="wing-chevron">&plus;</span>
+                </div>
+                <div class="wing-body" hidden>
+                  <p>A child has a hundred languages, a hundred hands, a hundred thoughts. We provide avenues in sculpting, dancing, song, gardening, building, and storytelling to express them all.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="philosophy-visual">
+            <div class="philosophy-honeycomb-showcase">
+              <div class="honeycomb-center-badge">
+                <div class="center-bee">🐝</div>
+                <strong>The Whole Child</strong>
+                <span>At the Heart of The Hive</span>
+              </div>
+              <div class="orb orb-top">🧠 Cognitive Wonder</div>
+              <div class="orb orb-right">💖 Emotional Empathy</div>
+              <div class="orb orb-bottom">🌿 Nature Connection</div>
+              <div class="orb orb-left">🎨 Creative Flourish</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== CAMPUS & LEARNING SPACES ==================== -->
+    <section class="campus-section" id="campus">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag tag-purple">Our Learning Sanctuaries</span>
+          <h2 class="section-title">Step Inside The Tiny Hive Campus</h2>
+          <p class="section-subtitle">
+            15,000 square feet of sunlit studios, nature garden, and sensory play spaces thoughtfully engineered for little hands.
+          </p>
+        </div>
+
+        <div class="campus-gallery-grid">
+          
+          <!-- Facility 1 -->
+          <div class="campus-card card-large">
+            <div class="campus-img-wrap">
+              <img src="assets/images/hero_kids.jpg" alt="Sunlit main Montessori classroom" class="campus-photo" loading="lazy">
+              <span class="campus-pill">Primary Learning Studio</span>
+            </div>
+            <div class="campus-card-body">
+              <h3>The Sunlit Honeycomb Studio</h3>
+              <p>Flooded with warm daylight, fitted with solid birch low furniture, open floor spaces, and self-directed Montessori trays.</p>
+              <div class="space-specs">
+                <span>✓ Medical-grade HEPA air filtration</span>
+                <span>✓ Non-toxic beeswax finishes</span>
+                <span>✓ 100% organic cotton rugs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Facility 2 -->
+          <div class="campus-card">
+            <div class="campus-img-wrap">
+              <img src="assets/images/garden_play.jpg" alt="Sensory garden and outdoor mud kitchen" class="campus-photo" loading="lazy">
+              <span class="campus-pill">Outdoor Forest &amp; Garden</span>
+            </div>
+            <div class="campus-card-body">
+              <h3>The Mud Kitchen &amp; Botanical Garden</h3>
+              <p>Raised garden beds, sunflower patches, child-sized wooden workbenches, and rain collection barrels for real gardening.</p>
+              <div class="space-specs">
+                <span>✓ Enclosed secure fencing</span>
+                <span>✓ Non-slip cedar walkways</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Facility 3 -->
+          <div class="campus-card">
+            <div class="campus-img-wrap">
+              <img src="assets/images/art_atelier.jpg" alt="Art atelier studio with easels" class="campus-photo" loading="lazy">
+              <span class="campus-pill">Reggio Art Atelier</span>
+            </div>
+            <div class="campus-card-body">
+              <h3>The Hundred Languages Atelier</h3>
+              <p>Dedicated studio with floor-to-ceiling windows, double-sided wooden easels, pottery wheels, and endless natural pigments.</p>
+              <div class="space-specs">
+                <span>✓ Food-grade edible pigments for tots</span>
+                <span>✓ Washable terracotta sink stations</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Facility 4 -->
+          <div class="campus-card">
+            <div class="campus-img-wrap">
+              <img src="assets/images/reading_nook.jpg" alt="Cozy reading nook with honeycomb pillows and books" class="campus-photo" loading="lazy">
+              <span class="campus-pill">Sensory Pod &amp; Library</span>
+            </div>
+            <div class="campus-card-body">
+              <h3>The Honeycomb Reading Nook</h3>
+              <p>Plush velvet honeycomb floor cushions, twinkling starlight canopy, and 1,200+ curated diverse picture books.</p>
+              <div class="space-specs">
+                <span>✓ Soft acoustic calming felt walls</span>
+                <span>✓ Aromatherapy lavender misting</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="campus-cta-strip">
+          <div class="cta-strip-text">
+            <h4>Want to see the classrooms in person?</h4>
+            <p>Our Director of Admissions conducts private parent tours Tuesday through Saturday mornings.</p>
+          </div>
+          <button type="button" class="btn btn-primary btn-pill" data-open-tour>Schedule an In-Person Walkthrough</button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== DAILY RHYTHM IN THE HIVE ==================== -->
+    <section class="rhythm-section" id="daily-rhythm">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag tag-yellow">Predictable Yet Playful</span>
+          <h2 class="section-title">A Day in the Hive</h2>
+          <p class="section-subtitle">
+            Young children thrive when their day has a gentle, rhythmic flow between lively outward exploration and quiet inward restorative moments.
+          </p>
+        </div>
+
+        <!-- Interactive Schedule Timeline -->
+        <div class="rhythm-interactive-container">
+          
+          <!-- Timeline Buttons -->
+          <div class="rhythm-timeline-bar" role="tablist" aria-label="Daily schedule time slots">
+            <button type="button" class="time-step-btn active" data-time="08:00" role="tab" aria-selected="true">
+              <span class="time-val">08:00 AM</span>
+              <span class="time-dot"></span>
+              <span class="time-name">Gentle Arrival</span>
+            </button>
+            <button type="button" class="time-step-btn" data-time="09:15" role="tab" aria-selected="false">
+              <span class="time-val">09:15 AM</span>
+              <span class="time-dot"></span>
+              <span class="time-name">Morning Song Circle</span>
+            </button>
+            <button type="button" class="time-step-btn" data-time="10:00" role="tab" aria-selected="false">
+              <span class="time-val">10:00 AM</span>
+              <span class="time-dot"></span>
+              <span class="time-name">Garden &amp; Mud Play</span>
+            </button>
+            <button type="button" class="time-step-btn" data-time="11:30" role="tab" aria-selected="false">
+              <span class="time-val">11:30 AM</span>
+              <span class="time-dot"></span>
+              <span class="time-name">Chef's Organic Feast</span>
+            </button>
+            <button type="button" class="time-step-btn" data-time="12:30" role="tab" aria-selected="false">
+              <span class="time-val">12:30 PM</span>
+              <span class="time-dot"></span>
+              <span class="time-name">Rest &amp; Lullaby</span>
+            </button>
+            <button type="button" class="time-step-btn" data-time="02:30" role="tab" aria-selected="false">
+              <span class="time-val">02:30 PM</span>
+              <span class="time-dot"></span>
+              <span class="time-name">Atelier &amp; STEAM</span>
+            </button>
+            <button type="button" class="time-step-btn" data-time="04:30" role="tab" aria-selected="false">
+              <span class="time-val">04:30 PM</span>
+              <span class="time-dot"></span>
+              <span class="time-name">Sunset Circle &amp; Home</span>
+            </button>
+          </div>
+
+          <!-- Dynamic Display Box for Selected Time -->
+          <div class="rhythm-display-card" id="rhythmDisplayCard">
+            <div class="rhythm-card-left">
+              <div class="rhythm-badge-wrap">
+                <span class="rhythm-time-badge" id="rhythmTimeBadge">08:00 AM – 09:15 AM</span>
+                <span class="rhythm-category-tag" id="rhythmCatTag">Welcoming Routine</span>
+              </div>
+              <h3 class="rhythm-card-title" id="rhythmCardTitle">Gentle Arrival &amp; Free Discovery Invitations</h3>
+              <p class="rhythm-card-desc" id="rhythmCardDesc">
+                Children arrive at their own pace, greeted by their primary educator with a warm smile. Soft classical music plays while children choose from sensory trays, block towers, or watercolor sketching.
+              </p>
+              <div class="rhythm-highlights" id="rhythmHighlights">
+                <span class="highlight-chip">👟 Shoe-changing independence</span>
+                <span class="highlight-chip">🥪 Fresh fruit water station</span>
+                <span class="highlight-chip">🤗 Warm educator check-in</span>
+              </div>
+            </div>
+            <div class="rhythm-card-right">
+              <div class="rhythm-media-frame">
+                <img src="assets/images/hero_kids.jpg" alt="Kids arriving and choosing morning toys" id="rhythmCardImg" class="rhythm-img">
+                <div class="rhythm-soundbite">
+                  <span class="soundbite-icon">💡</span>
+                  <em id="rhythmPedagogy">"Slow mornings foster neurological safety and emotional readiness for the entire day."</em>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== INTERACTIVE TUITION & CARE ESTIMATOR ==================== -->
+    <section class="estimator-section" id="estimator">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag tag-mint">Transparent Enrollment</span>
+          <h2 class="section-title">Hive Care &amp; Tuition Calculator</h2>
+          <p class="section-subtitle">
+            Tailor your family's schedule and instantly preview estimated monthly tuition, organic meal plans, and extended hours.
+          </p>
+        </div>
+
+        <div class="estimator-grid">
+          
+          <!-- Calculator Controls -->
+          <div class="calculator-card">
+            <h3 class="calculator-title">Build Your Child's Schedule</h3>
+
+            <!-- 1. Program Selection -->
+            <div class="form-group">
+              <label class="form-label" for="calcProgram">1. Select Age Program</label>
+              <div class="select-pill-group" id="calcProgram">
+                <button type="button" class="calc-pill-opt active" data-program="explorers" data-base="1450">
+                  <span>🍼 Tiny Explorers</span>
+                  <small>6–18m</small>
+                </button>
+                <button type="button" class="calc-pill-opt" data-program="bees" data-base="1350">
+                  <span>🐝 Busy Bees</span>
+                  <small>18m–3y</small>
+                </button>
+                <button type="button" class="calc-pill-opt" data-program="honeycombs" data-base="1250">
+                  <span>🍯 Honeycombs</span>
+                  <small>3–4.5y</small>
+                </button>
+                <button type="button" class="calc-pill-opt" data-program="kindergarten" data-base="1190">
+                  <span>🎓 Kindergarten</span>
+                  <small>4.5–6y</small>
+                </button>
+              </div>
+            </div>
+
+            <!-- 2. Days per Week -->
+            <div class="form-group">
+              <label class="form-label">2. Days Per Week</label>
+              <div class="days-toggle-group">
+                <button type="button" class="calc-day-opt" data-days="3" data-mult="0.75">3 Days (Mon, Wed, Fri)</button>
+                <button type="button" class="calc-day-opt" data-days="4" data-mult="0.90">4 Days (Mon – Thu)</button>
+                <button type="button" class="calc-day-opt active" data-days="5" data-mult="1.00">5 Days (Full Week)</button>
+              </div>
+            </div>
+
+            <!-- 3. Hours Tier -->
+            <div class="form-group">
+              <label class="form-label">3. Care Schedule Hours</label>
+              <div class="hours-radio-list">
+                <label class="radio-card">
+                  <input type="radio" name="hoursOption" value="half" data-add="0" checked>
+                  <span class="radio-content">
+                    <strong>Morning Wonder (8:00 AM – 12:30 PM)</strong>
+                    <small>Includes morning snack &amp; hot organic lunch</small>
+                  </span>
+                  <span class="radio-tag">Included</span>
+                </label>
+
+                <label class="radio-card">
+                  <input type="radio" name="hoursOption" value="full" data-add="220">
+                  <span class="radio-content">
+                    <strong>Full Day Hive (8:00 AM – 3:30 PM)</strong>
+                    <small>Includes lunch, nap rest, and afternoon atelier</small>
+                  </span>
+                  <span class="radio-tag">+ $220/mo</span>
+                </label>
+
+                <label class="radio-card">
+                  <input type="radio" name="hoursOption" value="extended" data-add="380">
+                  <span class="radio-content">
+                    <strong>Extended Care Club (8:00 AM – 6:00 PM)</strong>
+                    <small>Includes afternoon supper &amp; nature exploration club</small>
+                  </span>
+                  <span class="radio-tag">+ $380/mo</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 4. Optional Add-ons -->
+            <div class="form-group">
+              <label class="form-label">4. Optional Enrichments</label>
+              <div class="addons-list">
+                <label class="checkbox-card">
+                  <input type="checkbox" id="addonBilingual" data-fee="95">
+                  <span class="custom-checkbox"></span>
+                  <span class="checkbox-text">
+                    <strong>Bilingual French / Spanish Immersion</strong>
+                    <small>Daily playful conversational songs with native speaker</small>
+                  </span>
+                  <span class="addon-price">+$95/mo</span>
+                </label>
+
+                <label class="checkbox-card">
+                  <input type="checkbox" id="addonMusic" data-fee="80">
+                  <span class="custom-checkbox"></span>
+                  <span class="checkbox-text">
+                    <strong>Orff Suzuki Violin &amp; Rhythm Lab</strong>
+                    <small>Weekly small-group violin and percussive harmony</small>
+                  </span>
+                  <span class="addon-price">+$80/mo</span>
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Live Breakdown Summary Card -->
+          <div class="calculator-summary-card">
+            <div class="summary-top">
+              <div class="summary-badge">⚡ Live Estimate</div>
+              <h4 class="summary-heading">Estimated Monthly Investment</h4>
+              <div class="price-display">
+                <span class="currency">$</span>
+                <span class="price-number" id="calcTotalPrice">1,450</span>
+                <span class="period">/ month</span>
+              </div>
+              <p class="summary-note">All taxes, curriculum materials, organic chef meals, and live parent portal included.</p>
+            </div>
+
+            <div class="summary-breakdown">
+              <div class="breakdown-row">
+                <span id="breakdownProgramName">Tiny Explorers (5 Days)</span>
+                <span id="breakdownBasePrice">$1,450</span>
+              </div>
+              <div class="breakdown-row">
+                <span id="breakdownHoursName">Morning Wonder (8:00–12:30)</span>
+                <span id="breakdownHoursPrice">$0</span>
+              </div>
+              <div class="breakdown-row" id="breakdownAddonsRow" hidden>
+                <span>Selected Enrichments</span>
+                <span id="breakdownAddonsPrice">+$0</span>
+              </div>
+              <div class="breakdown-row total-row">
+                <strong>Net Monthly Investment</strong>
+                <strong id="breakdownFinalTotal">$1,450</strong>
+              </div>
+            </div>
+
+            <div class="summary-inclusions">
+              <strong>Always Included in Every Enrollment:</strong>
+              <ul>
+                <li>🌿 100% Organic Breakfast, Hot Lunch &amp; Snacks</li>
+                <li>📱 Access to Live Parent Portal &amp; Daily Photos</li>
+                <li>🎨 All Atelier Canvas, Clay &amp; Sensory Materials</li>
+                <li>🩺 Full On-site Pediatric First-Aid Nurse Coverage</li>
+                <li>🧺 Hypoallergenic Laundry &amp; Diaper Care Essentials</li>
+              </ul>
+            </div>
+
+            <div class="summary-cta">
+              <button type="button" class="btn btn-primary btn-block btn-pill" data-open-tour>
+                Lock In This Rate &amp; Book Tour
+              </button>
+              <p class="cta-guarantee">🔒 No application fee required for open house attendees.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== PARENT REVIEWS & WALL OF LOVE ==================== -->
+    <section class="reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag tag-purple">Real Family Stories</span>
+          <h2 class="section-title">The Wall of Honey Love</h2>
+          <p class="section-subtitle">
+            Read how The Tiny Hive became a second home for hundreds of joyful children and relieved parents.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          
+          <!-- Review 1 -->
+          <article class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">
+              “Finding The Tiny Hive was the greatest gift for our family. When our 2-year-old daughter Mia started, she was terribly shy. Within three weeks of their mud garden and loving educators, she was bubbling over with stories and singing garden songs at dinner!”
+            </p>
+            <div class="review-author">
+              <div class="author-avatar av-pink">🌸</div>
+              <div class="author-info">
+                <strong>Dr. Clara Montgomery</strong>
+                <span>Mother of Mia (Busy Bees Class)</span>
+              </div>
+            </div>
+            <div class="review-tag">Kindergarten Graduate '25</div>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="review-card featured-review">
+            <div class="featured-ribbon">⭐ Editor's Choice</div>
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">
+              “The balance of aesthetic beauty and rigorous early childhood science here is unmatched. It does not feel like a cold institutional nursery; it feels like an enchanted Scandinavian childhood haven. The organic chef meals even got my son eating spinach!”
+            </p>
+            <div class="review-author">
+              <div class="author-avatar av-blue">👨‍💼</div>
+              <div class="author-info">
+                <strong>Julian &amp; Sarah Vance</strong>
+                <span>Parents of Leo (Little Honeycombs)</span>
+              </div>
+            </div>
+            <div class="review-tag">Enrolled 3 Years</div>
+          </article>
+
+          <!-- Review 3 -->
+          <article class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">
+              “The live photo updates and transparent communication gave us total peace of mind as working parents. In kindergarten, our son Liam learnt basic robotics and phonics without ever feeling pressured. He bounded into school every single morning.”
+            </p>
+            <div class="review-author">
+              <div class="author-avatar av-yellow">🌿</div>
+              <div class="author-info">
+                <strong>Amina &amp; Tariq Patel</strong>
+                <span>Parents of Liam (Hive Kindergarten)</span>
+              </div>
+            </div>
+            <div class="review-tag">Primary School Ready</div>
+          </article>
+
+        </div>
+
+        <!-- Rating Counter Strip -->
+        <div class="review-counter-strip">
+          <div class="counter-box">
+            <span class="counter-num">120+</span>
+            <span class="counter-label">Happy Little Bees Enrolled</span>
+          </div>
+          <div class="counter-divider"></div>
+          <div class="counter-box">
+            <span class="counter-num">4.98 / 5</span>
+            <span class="counter-label">Verified Parent Satisfaction</span>
+          </div>
+          <div class="counter-divider"></div>
+          <div class="counter-box">
+            <span class="counter-num">100%</span>
+            <span class="counter-label">First-Choice Primary Placement</span>
+          </div>
+          <div class="counter-divider"></div>
+          <div class="counter-box">
+            <span class="counter-num">12 Yrs</span>
+            <span class="counter-label">Nurturing Early Years Excellence</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== SAFETY & NUTRITION STANDARDS ==================== -->
+    <section class="safety-section" id="standards">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag tag-coral">Uncompromising Care</span>
+          <h2 class="section-title">Safe, Wholesome &amp; Protected</h2>
+          <p class="section-subtitle">
+            Your child's physical and emotional safety is our absolute highest sanctity.
+          </p>
+        </div>
+
+        <div class="safety-grid">
+          <div class="safety-card">
+            <div class="safety-icon">🛡️</div>
+            <h4>Biometric &amp; Live Security</h4>
+            <p>Encrypted single-entry biometric check-in, verified guardian identification, and private live-stream campus security cameras.</p>
+          </div>
+
+          <div class="safety-card">
+            <div class="safety-icon">🍎</div>
+            <h4>100% Organic Scratch Kitchen</h4>
+            <p>Our in-house chef crafts seasonal, nutrient-dense meals with zero refined sugars, zero artificial dyes, and rigorous allergen isolation.</p>
+          </div>
+
+          <div class="safety-card">
+            <div class="safety-icon">🩺</div>
+            <h4>Full Pediatric Certified Staff</h4>
+            <p>100% of our educators hold pediatric CPR, First Aid, EpiPen administration, and early neuro-developmental credentials.</p>
+          </div>
+
+          <div class="safety-card">
+            <div class="safety-icon">🍃</div>
+            <h4>Zero-VOC Pure Environment</h4>
+            <p>HEPA-14 continuous air scrubbers, plant-based non-toxic sanitizers, and natural daylight circadian rhythm lighting systems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== FINAL ENROLLMENT BANNER ==================== -->
+    <section class="cta-banner-section">
+      <div class="container">
+        <div class="cta-banner-card">
+          <div class="banner-honeycomb-bg" aria-hidden="true"></div>
+          <div class="banner-content">
+            <span class="banner-pill">🐝 Come Buzz With Us</span>
+            <h2 class="banner-title">Give Your Little One the Most Magical Foundation.</h2>
+            <p class="banner-desc">
+              Schedule a tranquil morning visit to The Tiny Hive. Meet our warm educators, smell the fresh lavender garden, and watch our happy children in action.
+            </p>
+            <div class="banner-buttons">
+              <button type="button" class="btn btn-dark btn-lg btn-pill" data-open-tour>
+                Book a Private Discovery Tour
+              </button>
+              <a href="tel:5552899448" class="btn btn-white-translucent btn-lg btn-pill">
+                📞 Call Admissions: (555) 289-9448
+              </a>
+            </div>
+          </div>
+          <div class="banner-bee-mascot" aria-hidden="true">
+            <div class="big-bee">🐝</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-top">
+      
+      <!-- Brand & Mission Column -->
+      <div class="footer-col footer-brand-col">
+        <a href="#hero" class="brand-logo footer-logo">
+          <div class="logo-icon-wrapper">
+            <svg class="logo-honeycomb" viewBox="0 0 60 60" fill="none" width="36" height="36" aria-hidden="true">
+              <polygon points="30,3 56,18 56,48 30,63 4,48 4,18" fill="#FFB800"/>
+            </svg>
+            <span class="bee-mascot-mini">🐝</span>
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">The Tiny Hive</span>
+            <span class="logo-tagline">Early Year Foundation School</span>
+          </div>
+        </a>
+        <p class="footer-mission">
+          Nurturing curious minds, compassionate hearts, and confident steps in an inspiring community of early discovery.
+        </p>
+        <div class="footer-accreditations">
+          <span class="acc-badge">⭐ EYFS Gold</span>
+          <span class="acc-badge">🌿 Eco-Schools Green Flag</span>
+          <span class="acc-badge">🛡️ Reggio Certified</span>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Explore The Hive</h4>
+        <ul class="footer-links">
+          <li><a href="#programs">Age Programs</a></li>
+          <li><a href="#philosophy">Our Philosophy</a></li>
+          <li><a href="#campus">Campus &amp; Facilities</a></li>
+          <li><a href="#daily-rhythm">Daily Rhythm Schedule</a></li>
+          <li><a href="#estimator">Tuition Calculator</a></li>
+          <li><a href="#reviews">Parent Testimonials</a></li>
+        </ul>
+      </div>
+
+      <!-- Hours & Location -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Campus &amp; Hours</h4>
+        <div class="footer-contact-item">
+          <span class="contact-icon">📍</span>
+          <div>
+            <strong>The Tiny Hive Academy</strong>
+            <span>42 Honeycomb Meadow Lane<br>Sunnyvale Meadows, CA 94086</span>
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <span class="contact-icon">⏰</span>
+          <div>
+            <strong>School Hours:</strong>
+            <span>Mon – Fri: 7:45 AM – 6:00 PM<br>Saturday Open House: 9:00 AM – 1:00 PM</span>
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <span class="contact-icon">✉️</span>
+          <div>
+            <strong>Inquiries:</strong>
+            <span>admissions@thetinyhive.edu</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter & Community -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">The Honey Gazette</h4>
+        <p class="newsletter-sub">
+          Receive gentle parenting insights, early childhood creative activities, and enrollment notices.
+        </p>
+        <form class="newsletter-form" id="newsletterForm" onsubmit="return false;">
+          <div class="newsletter-input-group">
+            <input type="email" class="newsletter-input" id="newsletterEmail" placeholder="Enter your email address" required aria-label="Email address for newsletter">
+            <button type="submit" class="btn btn-primary newsletter-submit-btn" id="newsletterSubmitBtn" aria-label="Subscribe">
+              <span>Subscribe</span>
+            </button>
+          </div>
+          <div class="form-feedback hidden" id="newsletterFeedback">
+            🎉 Welcome to our Hive family! Check your inbox soon.
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Footer Bottom Strip -->
+    <div class="container footer-bottom">
+      <p class="copyright-text">
+        &copy; 2026 The Tiny Hive Early Year Foundation School. All rights reserved. Built with love &amp; nature for little bees.
+      </p>
+      <div class="footer-legal-links">
+        <a href="#hero">Privacy Policy</a>
+        <a href="#hero">Safeguarding Charter</a>
+        <a href="#hero">Allergy Protocols</a>
+        <a href="#hero">Accessibility</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ==================== MODAL: SCHEDULE A HIVE TOUR ==================== -->
+  <dialog class="tour-dialog" id="tourDialog" aria-labelledby="dialogTitle">
+    <div class="dialog-card">
+      <button type="button" class="dialog-close-btn" id="closeTourDialogBtn" aria-label="Close booking modal">&times;</button>
+      
+      <!-- Step 1: Form -->
+      <div class="dialog-form-view" id="dialogFormView">
+        <div class="dialog-header text-center">
+          <div class="dialog-badge">🐝 Personal Discovery Visit</div>
+          <h3 class="dialog-title" id="dialogTitle">Book a Visit to The Tiny Hive</h3>
+          <p class="dialog-subtitle">Experience our sunlit studios, meet dedicated teachers, and see little bees thriving.</p>
+        </div>
+
+        <form class="tour-form" id="tourBookingForm" onsubmit="return false;">
+          <div class="form-row-2">
+            <div class="form-field">
+              <label for="parentName" class="field-label">Parent / Guardian Name *</label>
+              <input type="text" id="parentName" class="field-input" placeholder="e.g. Sarah Jenkins" required>
+            </div>
+            <div class="form-field">
+              <label for="parentEmail" class="field-label">Email Address *</label>
+              <input type="email" id="parentEmail" class="field-input" placeholder="sarah@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-field">
+              <label for="parentPhone" class="field-label">Phone Number *</label>
+              <input type="tel" id="parentPhone" class="field-input" placeholder="(555) 000-0000" required>
+            </div>
+            <div class="form-field">
+              <label for="childAgeGroup" class="field-label">Child's Age Group *</label>
+              <select id="childAgeGroup" class="field-input" required>
+                <option value="" disabled selected>Select age program</option>
+                <option value="explorers">Tiny Explorers (6m – 18m)</option>
+                <option value="bees">Busy Bees (18m – 3 yrs)</option>
+                <option value="honeycombs">Little Honeycombs (3 – 4.5 yrs)</option>
+                <option value="kindergarten">Hive Kindergarten (4.5 – 6 yrs)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-field">
+              <label for="tourDate" class="field-label">Preferred Tour Date *</label>
+              <input type="date" id="tourDate" class="field-input" required>
+            </div>
+            <div class="form-field">
+              <label for="tourSlot" class="field-label">Preferred Time Window *</label>
+              <select id="tourSlot" class="field-input" required>
+                <option value="morning">Morning Circle (09:30 AM – 10:30 AM)</option>
+                <option value="garden">Garden &amp; Mud Play (10:30 AM – 11:30 AM)</option>
+                <option value="afternoon">Afternoon Atelier (02:30 PM – 03:30 PM)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="tourNotes" class="field-label">Special Questions or Dietary/Allergy Notes (Optional)</label>
+            <textarea id="tourNotes" class="field-input field-textarea" rows="2" placeholder="Tell us about your little one's interests, milestones, or questions..."></textarea>
+          </div>
+
+          <div class="dialog-action-row">
+            <button type="submit" class="btn btn-primary btn-lg btn-pill btn-block" id="submitTourBtn">
+              Confirm &amp; Reserve Private Visit
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Step 2: Confirmation State -->
+      <div class="dialog-success-view hidden" id="dialogSuccessView">
+        <div class="success-animation-wrap">
+          <div class="success-bee">🐝</div>
+          <div class="success-checkmark">✓</div>
+        </div>
+        <h3 class="success-title">Your Hive Visit is Reserved!</h3>
+        <p class="success-msg" id="successMsgText">
+          We can't wait to welcome you and your little bee! A confirmation and campus parking pass have been dispatched to your email.
+        </p>
+        <div class="success-recap-box" id="successRecapBox">
+          <div><strong>Date:</strong> <span id="recapDate">Tuesday, Oct 12</span></div>
+          <div><strong>Time:</strong> <span id="recapTime">09:30 AM (Morning Circle)</span></div>
+          <div><strong>Program:</strong> <span id="recapProgram">Busy Bees (18m – 3 yrs)</span></div>
+        </div>
+        <button type="button" class="btn btn-primary btn-pill" id="finishBookingBtn">Done &amp; Return to The Hive</button>
+      </div>
+
+    </div>
+  </dialog>
+
+  <!-- Floating Quick WhatsApp/Phone Badge for Instant Parent Support -->
+  <div class="floating-quick-help">
+    <a href="tel:5552899448" class="quick-help-pill" aria-label="Call Admissions">
+      <span class="quick-help-icon">📞</span>
+      <span class="quick-help-text">Admissions Direct</span>
+    </a>
+  </div>
+
+  <!-- Confetti Canvas for Celebratory Moments -->
+  <canvas id="confettiCanvas" class="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- Javascript -->
+  <script src="script.js"></script>
+</body>
+</html>
