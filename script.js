@@ -168,8 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'Sunflower Watering in Mud Garden',
     'Wooden Block Castle Engineering',
     'Bilingual French Story Circle',
-    'Lavender Mist & Storybook Nook',
-    'Organic Strawberry Tasting'
+    'Lavender Mist & Storybook Nook'
   ];
   let actIndex = 0;
 
@@ -254,8 +253,8 @@ document.addEventListener('DOMContentLoaded', () => {
      7. Daily Rhythm Interactive Schedule
      ========================================================================== */
   const scheduleData = {
-    '08:00': {
-      timeBadge: '08:00 AM – 09:15 AM',
+    '08:45': {
+      timeBadge: '08:45 AM – 09:30 AM',
       category: 'Welcoming Routine',
       title: 'Gentle Arrival & Free Discovery Invitations',
       desc: 'Children arrive at their own pace, greeted by their primary educator with a warm smile. Soft classical music plays while children choose from sensory trays, block towers, or watercolor sketching.',
@@ -263,8 +262,8 @@ document.addEventListener('DOMContentLoaded', () => {
       pedagogy: '"Slow mornings foster neurological safety and emotional readiness for the entire day."',
       img: 'assets/images/hero_kids.jpg'
     },
-    '09:15': {
-      timeBadge: '09:15 AM – 10:00 AM',
+    '09:30': {
+      timeBadge: '09:30 AM – 10:00 AM',
       category: 'Community Connection',
       title: 'Morning Song Circle & Daily Intentions',
       desc: 'Gathering on the cozy honeycomb rug with acoustic guitar or ukulele. Children sing welcome songs, discuss the weather wheel, share their feelings with emotion plushies, and set the day’s project focus.',
